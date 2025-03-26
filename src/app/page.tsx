@@ -63,12 +63,12 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-900/60 p-4">
+        <main className="min-h-screen bg-gradient-to-t from-yellow-500 via-white to-yellow-900/60 p-4">
             <Toaster position="top-right" />
             <div className="max-w-4xl mx-auto">
-                <div className="flex justify-center items-center mb-8">
-                    <Image src="/Cheesecake.png" alt="Cheesecake Logo" width={100} height={100} className="rounded-full w-16 h-16 mt-4" />
-                    <h1 className="text-5xl font-bold text-center mb-8 text-white font-quantico shadow-lg tracking-tighter leading-tight mt-10">
+                <div className="flex justify-center items-center gap-4 mb-8">
+                    <Image src="/Cheesecake.png" alt="Cheesecake Logo" width={100} height={100} className="rounded-md mt-4" />
+                    <h1 className="text-4xl px-2 py-1 font-bold text-center mb-8 text-white font-quantico shadow-lg tracking-tighter leading-tight mt-10">
                         Cheesecake Chat Interface
                     </h1>
                 </div>

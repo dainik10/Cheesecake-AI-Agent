@@ -230,7 +230,7 @@ export default function ChatInterface({ privateKey }: Props) {
     };
 
     return (
-        <div className="bg-gray-900/50 backdrop-blur-sm rounded-lg shadow-lg border border-purple-600/80 h-[600px] flex flex-col">
+        <div className="bg-gray-900/50 backdrop-blur-sm rounded-lg shadow-lg border border-yellow-600/80 h-[600px] flex flex-col">
             <div className="flex-1 overflow-y-auto p-4 scroll-smooth" style={{ scrollBehavior: 'smooth' }}>
                 {messages.map((message, index) => (
                     <div
@@ -250,14 +250,14 @@ export default function ChatInterface({ privateKey }: Props) {
                                                 ? 'bg-red-900/50 text-white border border-red-500/30'
                                                 : message.type === 'warning'
                                                     ? 'bg-yellow-900/50 text-white border border-yellow-500/30'
-                                                    : 'bg-purple-800/40 text-white'
+                                                    : 'bg-yellow-500/40 text-white'
                                 }`}
                         >
                             {/* {message.role === 'tool' && (
                                 <div className="text-xs text-blue-300 mb-1 font-mono">🛠️ Tool Output</div>
                             )} */}
                             {message.role === 'agent' && (
-                                <div className="text-xs text-purple-300 mb-1 font-mono">🤖 Agent Response</div>
+                                <div className="text-xs text-yellow-300 mb-1 font-mono">🤖 Agent Response</div>
                             )}
                             {message.content}
                             {message.type === 'transaction' && (
@@ -272,7 +272,7 @@ export default function ChatInterface({ privateKey }: Props) {
                 <div ref={messagesEndRef} className="h-8" />
             </div>
 
-            <form onSubmit={handleSubmit} className="p-4 border-t-2 border-purple-600/50">
+            <form onSubmit={handleSubmit} className="p-4 border-t-2 border-yellow-600/50">
                 <div className="flex gap-2">
                     <input
                         type="text"
@@ -280,7 +280,7 @@ export default function ChatInterface({ privateKey }: Props) {
                         onChange={(e) => setInput(e.target.value)}
                         disabled={isLoading}
                         placeholder="Type your message..."
-                        className="flex-1 p-2 rounded-md bg-gray-800 text-white border-2 border-purple-500/20 focus:outline-none focus:ring-2 focus:ring-purple-500/50 placeholder-gray-400"
+                        className="flex-1 p-2 rounded-md bg-gray-800 text-white border-2 border-yellow-500/20 focus:outline-none focus:ring-2 focus:ring-yellow-500/50 placeholder-gray-400"
                     />
                     <button
                         type="submit"
@@ -290,8 +290,8 @@ export default function ChatInterface({ privateKey }: Props) {
                         <span className="relative z-10">
                             {isLoading ? 'Sending...' : 'Send'}
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-purple-800/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                        <div className="absolute inset-0 border-2 border-purple-600 rounded-md animate-pulse-border" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/20 to-yellow-800/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                        <div className="absolute inset-0 border-2 border-yellow-600 rounded-md animate-pulse-border" />
                     </button>
                 </div>
             </form>
