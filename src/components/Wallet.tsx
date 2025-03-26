@@ -194,17 +194,17 @@ export default function Wallet({ onConnect }: Props) {
                         value={importPrivateKey}
                         onChange={(e) => setImportPrivateKey(e.target.value)}
                         placeholder="0x..."
-                        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
+                        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black"
                     />
                 </div>
                 <button
                     type="button"
                     onClick={importWallet}
                     disabled={isConnecting || !importPrivateKey}
-                    className={`w-full py-2 px-4 rounded-md text-white mb-2 ${
+                    className={`w-full py-2 px-4 rounded-md text-black mb-2 ${
                         isConnecting || !importPrivateKey
-                            ? 'bg-purple-400 cursor-not-allowed'
-                            : 'bg-purple-600 hover:bg-purple-700'
+                            ? 'bg-yellow-400 cursor-not-allowed'
+                            : 'bg-yellow-600 hover:bg-yellow-700'
                     }`}
                 >
                     {isConnecting ? 'Importing...' : 'Import Wallet'}
@@ -238,10 +238,10 @@ export default function Wallet({ onConnect }: Props) {
                     type="button"
                     onClick={createNewWallet}
                     disabled={isConnecting}
-                    className={`w-full py-2 px-4 rounded-md text-white ${
+                    className={`w-full py-2 px-4 rounded-md text-black ${
                         isConnecting
-                            ? 'bg-purple-400 cursor-not-allowed'
-                            : 'bg-purple-600 hover:bg-purple-700'
+                            ? 'bg-yellow-400 cursor-not-allowed'
+                            : 'bg-yellow-600 hover:bg-yellow-700'
                     }`}
                 >
                     {isConnecting ? 'Generating...' : 'Create New Wallet'}
@@ -250,7 +250,7 @@ export default function Wallet({ onConnect }: Props) {
                 <button
                     type="button"
                     onClick={() => setIsImporting(true)}
-                    className="w-full py-2 px-4 rounded-md text-purple-600 border border-purple-600 hover:bg-purple-50"
+                    className="w-full py-2 px-4 rounded-md text-yellow-600 border border-yellow-600 hover:bg-yellow-50"
                 >
                     Import Existing Wallet
                 </button>
